@@ -1,0 +1,12 @@
+schedules:
+- cron: '00 15 * * *'
+  displayName: 'Daily cron'
+  branches:
+    include:
+    - master
+  always: 'true'
+
+jobs:
+  - job:
+    steps:
+      - script: echo "test"
